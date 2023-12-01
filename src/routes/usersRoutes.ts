@@ -1,12 +1,8 @@
 import { FastifyInstance } from 'fastify'
+import { registerController } from '../controllers/usersController/registerController'
+import { loginController } from '../controllers/usersController/loginController'
 
-
-import { authenticate } from '@/http/controllers/users/authenticate'
-import { passwordRecovery } from '@/http/controllers/users/password-recovery'
-import { passwordSetting } from '@/http/controllers/users/password-setting'
-
-export async function usersRoutes(app: FastifyInstance) {
-  app.post('/sessions', authenticate)
-  app.post('/password-recovery', passwordRecovery)
-  app.post('/password-setting', passwordSetting)
+export const usersRoutes = async (app: FastifyInstance) => {
+  app.post('/register', registerController)
+  app.post('/login', loginController)
 }

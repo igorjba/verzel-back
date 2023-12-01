@@ -1,10 +1,9 @@
-import { usersRoutes } from '../src/routes/usersRoutes'
 import cors from '@fastify/cors'
 import fastifyJwt from '@fastify/jwt'
 import fastifyMultipart from '@fastify/multipart'
 import fastify from 'fastify'
+import { usersRoutes } from '../src/routes/usersRoutes'
 import { env } from './env'
-import { vehiclesRoutes } from '../src/routes/vehiclesRoutes'
 
 
 export const app = fastify()
@@ -21,6 +20,6 @@ app.register(fastifyJwt, {
     expiresIn: '24h',
   },
 })
+
 app.register(usersRoutes)
-app.register(vehiclesRoutes)
 

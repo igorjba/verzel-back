@@ -6,11 +6,6 @@ const envSchema = z.object({
   JWT_SECRET: z.string(),
   SUPER_TOKEN: z.string(),
   PORT: z.coerce.number().default(3333),
-  EMAIL_HOST: z.string(),
-  EMAIL_PORT: z.coerce.number(),
-  EMAIL_AUTH_USER: z.string(),
-  EMAIL_AUTH_PASS: z.string(),
-  URL_RECOVERY_PASSWORD: z.string(),
 })
 
 const _env = envSchema.safeParse(process.env)
