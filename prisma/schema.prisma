@@ -1,11 +1,28 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
+// schema.prisma
 
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "postgresql" // ou o banco de dados de sua escolha
   url      = env("DATABASE_URL")
 }
+
+model Vehicle {
+  id      Int      @id @default(autoincrement())
+  name    String
+  brand   String
+  model   String
+  value   Float
+  photo   String?
+}
+
+model User {
+  id       Int      @id @default(autoincrement())
+  email    String   @unique
+  password String
+  isAdmin  Boolean  @default(false)
+  // Relacionamentos e outras colunas podem ser incluídos aqui
+}
+
