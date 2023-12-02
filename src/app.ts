@@ -4,6 +4,7 @@ import fastifyMultipart from '@fastify/multipart'
 import fastify from 'fastify'
 import { usersRoutes } from '../src/routes/usersRoutes'
 import { env } from './env'
+import { vehiclesRoutes } from './routes/vehiclesRoutes'
 
 
 export const app = fastify()
@@ -22,4 +23,5 @@ app.register(fastifyJwt, {
 })
 
 app.register(usersRoutes)
+app.register(vehiclesRoutes)
 
