@@ -1,4 +1,12 @@
 {
+  "include": [
+    "src",
+    "global.d.ts",
+    "fastify-jwt.d.ts",
+    "vehicleTypes.d.ts",
+    "src/**/*.ts",
+    "src/@types/*.d.ts"
+  ],
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
 

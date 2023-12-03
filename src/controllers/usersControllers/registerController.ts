@@ -1,6 +1,6 @@
 import { FastifyRequest, FastifyReply } from 'fastify'
 import { createUserSchema } from '../../schemas/userSchemas'
-import { registerUser } from '../../services/usersService/registerUserService'
+import { registerUser } from '../../services/usersServices/registerUserService'
 
 export const registerController = async (req: FastifyRequest, reply: FastifyReply) => {
   try {

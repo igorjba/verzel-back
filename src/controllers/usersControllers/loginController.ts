@@ -1,6 +1,6 @@
 import { FastifyRequest, FastifyReply } from 'fastify'
 import { loginUserSchema } from '../../schemas/userSchemas'
-import { loginUser } from '../../services/usersService/loginService'
+import { loginUser } from '../../services/usersServices/loginService'
 
 export const loginController = async (req: FastifyRequest, reply: FastifyReply) => {
   try {
@@ -16,7 +16,7 @@ export const loginController = async (req: FastifyRequest, reply: FastifyReply) 
     if (error instanceof Error) {
       return reply.code(400).send(error.message)
     } else {
-      return reply.code(500).send('An unexpected error occurred')
+      return reply.code(500).send('Internal Server Error')
     }
   }
 }

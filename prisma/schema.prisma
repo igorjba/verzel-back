@@ -3,17 +3,19 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql" // ou o banco de dados de sua escolha
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
 model Vehicle {
-  id      Int      @id @default(autoincrement())
+  id      String   @id @db.Uuid @default(uuid())
   name    String
   brand   String
   model   String
   value   Float
   photo   String?
+
+  @@map("vehicles")
 }
 
 enum Role {
@@ -22,10 +24,11 @@ enum Role {
 }
 
 model User {
-  id       Int    @id @default(autoincrement())
+  id       String    @id @db.Uuid @default(uuid())
   name     String
-  email    String @unique
+  email    String    @unique
   password String
-  role     Role   @default(USER)
-}
+  role     Role      @default(USER)
 
+  @@map("users")
+}

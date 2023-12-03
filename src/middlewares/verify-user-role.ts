@@ -1,14 +1,16 @@
-import { FastifyReply, FastifyRequest } from 'fastify'
+import { FastifyRequest, FastifyReply } from 'fastify'
+import { Role } from '../enums/enumRole'
 
-export function verifyUserRole(allowedRoles: string[]) {
+export function verifyUserRole(allowedRoles: Role[]) {
   return async (request: FastifyRequest, reply: FastifyReply) => {
     try {
-      const userRole = request.user.role
-      if (!allowedRoles.includes(userRole)) {
+      const user = request.user as { id: string; role: Role }
+
+      if (!user || !allowedRoles.includes(user.role)) {
         return reply.status(403).send({ message: 'Unauthorized.' })
       }
     } catch (error) {
-      return reply.status(403).send({ message: 'Unauthorized.' })
+      reply.status(403).send({ message: 'Error while verifying user permission.' })
     }
   }
 }

@@ -1,6 +1,6 @@
 import { FastifyRequest, FastifyReply } from 'fastify'
 import { createVehicleSchema } from '../../schemas/vehiclesSchemas'
-import { createVehicle } from '../../services/vehiclesService/createVehicleService'
+import { createVehicle } from '../../services/vehiclesServices/createVehicleService'
 
 export const createVehicleController = async (req: FastifyRequest, reply: FastifyReply) => {
   const { body } = createVehicleSchema.parse(req)
@@ -11,7 +11,8 @@ export const createVehicleController = async (req: FastifyRequest, reply: Fastif
     if (error instanceof Error) {
       return reply.code(400).send(error.message)
     } else {
-      return reply.code(500).send('An unexpected error occurred')
+      return reply.code(500).send('Internal Server Error')
     }
   }
 }
+
