@@ -97,7 +97,7 @@ npm run dev
 
 ### [Typescript](https://www.typescriptlang.org/)
 
-### [Express](https://expressjs.com)
+### [Fastity](https://fastify.dev/)
 
 ### [Prisma](https://www.prisma.io/)
 
