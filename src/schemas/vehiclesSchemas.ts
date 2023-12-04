@@ -22,3 +22,9 @@ export const updateVehicleSchema = z.object({
     vehicleId: z.string().uuid(),
   }),
 })
+
+export const deleteVehicleSchema = z.object({
+  params: z.object({
+    vehicleId: z.string().uuid(),
+  }),
+})
