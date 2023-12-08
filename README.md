@@ -6,6 +6,9 @@
 
 </center>
 
+[Front: https://github.com/igorjba/verzel-front](https://github.com/igorjba/verzel-front)
+[Back: https://github.com/igorjba/verzel-back](https://github.com/igorjba/verzel-back)
+
 ## 🏡 **Rodando localmente**
 
 ### Para rodar o projeto localmente, siga as seguintes instruções
