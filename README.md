@@ -6,8 +6,15 @@
 
 </center>
 
-[Front: https://github.com/igorjba/verzel-front](https://github.com/igorjba/verzel-front)
-[Back: https://github.com/igorjba/verzel-back](https://github.com/igorjba/verzel-back)
+## Acesse os Repositórios do Projeto
+
+### [FRONTEND REPOSITORY](https://github.com/igorjba/verzel-front)
+
+### [BACKEND REPOSITORY](https://github.com/igorjba/verzel-back)
+
+<br />
+
+<br />
 
 ## 🏡 **Rodando localmente**
 
