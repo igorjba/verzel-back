@@ -2,7 +2,7 @@
 
 <center>
 
-### [Rodando Localmente](#🏡-rodando-localmente) ▪️ [Diagrama](#📕-diagrama-banco-de-dados) ▪️ [Fluxogramas](#📘-fluxogramas) ▪️ [Funcionalidades](#📚-funcionalidades) ▪️ [Tecnologias](#🚀-tecnologias)
+### [Rodando Localmente](#🏡-rodando-localmente) ▪️ [Documentação da API](#📚-documentação-da-api) ▪️ [Funcionalidades](#📚-funcionalidades) ▪️ [Tecnologias](#🚀-tecnologias)
 
 </center>
 
@@ -21,7 +21,7 @@
 ### Para rodar o projeto localmente, siga as seguintes instruções
 
 <br />
-<details><summary>Clique aqui</summary>
+<details><summary>Ver o passo a passo</summary>
 <br />
 Clone o projeto
 
