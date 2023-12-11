@@ -28,9 +28,24 @@ export const listVehicles = async (page: number, limit: number, search: string |
   const whereClause = search
     ? {
       OR: [
-        { name: { contains: search } },
-        { brand: { contains: search } },
-        { model: { contains: search } },
+        {
+          name: {
+            contains: search,
+            mode: 'insensitive' as const,
+          }
+        },
+        {
+          brand: {
+            contains: search,
+            mode: 'insensitive' as const,
+          }
+        },
+        {
+          model: {
+            contains: search,
+            mode: 'insensitive' as const,
+          }
+        },
       ],
     }
     : {}
