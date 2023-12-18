@@ -8,7 +8,6 @@ import fs from 'fs'
 export const createVehicleController = async (req: FastifyRequest, reply: FastifyReply) => {
   try {
     const files = await req.saveRequestFiles()
-    console.log('Arquivos recebidos:', files)
 
     const fields = req.body as any
 
