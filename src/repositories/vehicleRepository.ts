@@ -1,13 +1,13 @@
 import prisma from '../prismaClient'
 
-export const createVehicle = async (name: string, brand: string, model: string, value: number, photo?: string) => {
+export const createVehicle = async (name: string, brand: string, model: string, value: number, photoUrl?: string) => {
   return await prisma.vehicle.create({
     data: {
       name,
       brand,
       model,
       value,
-      photo,
+      photoUrl,
     },
   })
 }

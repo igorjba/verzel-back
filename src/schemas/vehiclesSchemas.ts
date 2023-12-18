@@ -1,13 +1,11 @@
 import { z } from 'zod'
 
 export const createVehicleSchema = z.object({
-  body: z.object({
-    name: z.string(),
-    brand: z.string(),
-    model: z.string(),
-    value: z.number(),
-    photo: z.string().optional(),
-  }),
+  name: z.string(),
+  brand: z.string(),
+  model: z.string(),
+  value: z.number(),
+  photoUrl: z.string().optional(),
 })
 
 export const updateVehicleSchema = z.object({
@@ -16,7 +14,7 @@ export const updateVehicleSchema = z.object({
     brand: z.string().optional(),
     model: z.string().optional(),
     value: z.number().optional(),
-    photo: z.string().optional(),
+    photoUrl: z.string().optional(),
   }),
   params: z.object({
     vehicleId: z.string().uuid(),

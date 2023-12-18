@@ -16,3 +16,4 @@ export const vehiclesRoutes = async (app: FastifyInstance) => {
   app.get('/vehicles/:vehicleId', getVehicleController)
   app.get('/vehicles', listVehiclesController)
 }
+

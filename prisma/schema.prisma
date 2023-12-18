@@ -13,7 +13,7 @@ model Vehicle {
   brand   String
   model   String
   value   Float
-  photo   String?
+  photoUrl String? @map("photo_url")
 
   @@map("vehicles")
 }

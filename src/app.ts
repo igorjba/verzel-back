@@ -9,7 +9,12 @@ import { vehiclesRoutes } from './routes/vehiclesRoutes'
 
 export const app = fastify()
 
-app.register(fastifyMultipart)
+app.register(fastifyMultipart, {
+  limits: {
+    fileSize: 1024 * 1024 * 20,
+  },
+  attachFieldsToBody: true,
+})
 
 app.register(cors, {
   origin: true
