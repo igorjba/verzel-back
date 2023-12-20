@@ -41,22 +41,22 @@ Instale as dependências do projeto
 npm install
 ```
 
-Crie o arquivo .env que possibilita que sejam adicionadas as variáveis de ambiente do projeto
+Crie o arquivo .env para configurar as variáveis de ambiente do projeto
 
 ```bash
 cp .env.example .env
 ```
 
-Rode a imagem do docker
+Rode a imagem do Docker
 
 ```bash
 docker compose up -d
 ```
 
-Rode as migrações do prisma
+Rode as migrações do Prisma
 
 ```bash
-npm run migration:run
+npx prisma migrate dev
 ```
 
 Rode a aplicação
@@ -127,6 +127,8 @@ POST http://localhost:3333/register
 
 **Body:**
 ```json
+
+
 {
   "name": "Nome do Usuário",
   "email": "email@dominio.com",
@@ -258,9 +260,8 @@ GET http://localhost:3333/vehicles?page=2&limit=5&search=Ford
 
 ### [Typescript](https://www.typescriptlang.org/)
 
-### [Fastity](https://fastify.dev/)
+### [Fastify](https://fastify.dev/)
 
 ### [Prisma](https://www.prisma.io/)
 
 ### [Zod](https://zod.dev/)
-

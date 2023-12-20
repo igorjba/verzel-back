@@ -5,9 +5,10 @@ import { createVehicle } from '../../services/vehiclesServices/createVehicleServ
 export const createVehicleController = async (req: FastifyRequest, reply: FastifyReply) => {
   const { body } = createVehicleSchema.parse(req)
   try {
-    const vehicle = await createVehicle(body.name, body.brand, body.model, body.value, body.photo)
+    const vehicle = await createVehicle(body)
     return reply.code(201).send(vehicle)
   } catch (error) {
+    console.log(error)
     if (error instanceof Error) {
       return reply.code(400).send(error.message)
     } else {
