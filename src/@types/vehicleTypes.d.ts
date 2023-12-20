@@ -2,10 +2,10 @@ export interface VehicleParams {
   vehicleId: string;
 }
 
-export interface VehicleCreationData {
+export interface VehicleBody {
   name: string;
   brand: string;
   model: string;
   value: number;
-  photoUrl?: string;
+  photo: string;
 }
